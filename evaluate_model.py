@@ -17,7 +17,6 @@ IMAGE_SIZE = 224
 EPOCHS = 30
 
 DATA_DIR = f"processed_data/processed_data_{IMAGE_NUMBER}-{IMAGE_SIZE}" 
-# MODEL_DIR = f"models/resnet/resnet_model-{IMAGE_NUMBER}-{IMAGE_SIZE}-{EPOCHS}.keras"
 MODEL_DIR = f"models/densenet/densenet_model-{IMAGE_NUMBER}-{IMAGE_SIZE}-{EPOCHS}.keras"
 
 # Load the pre-trained model that was saved during training

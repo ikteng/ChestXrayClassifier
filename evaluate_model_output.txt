@@ -2,98 +2,50 @@ densenet_model-2000-224-30.keras:
 
 IMAGE_NUMBER = 2000
 IMAGE_SIZE = 224
-
 EPOCHS = 30
-BATCH_SIZE = 32
 
 Evaluation Results:
-Loss = 0.9058, Accuracy = 0.8075
+Loss = 0.8119, Accuracy = 0.8125
 
 Classification Report:
               precision    recall  f1-score   support
 
-No Pneumonia       0.81      0.93      0.87       271
-   Pneumonia       0.80      0.54      0.65       129
+No Pneumonia       0.85      0.87      0.86       271
+   Pneumonia       0.72      0.68      0.70       129
 
     accuracy                           0.81       400
-   macro avg       0.80      0.74      0.76       400
-weighted avg       0.81      0.81      0.80       400
+   macro avg       0.79      0.78      0.78       400
+weighted avg       0.81      0.81      0.81       400
 
-AUC Score: 0.8471
+AUC Score: 0.8559
 Confusion Matrix:
-[[253  18]
- [ 59  70]]
+[[237  34]
+ [ 41  88]]
 
 ---------------------------------------------------------------------------------
 
-densenet_model-2000-224-30.keras:
+densenet_model-4000-224-30.keras:
 
 IMAGE_NUMBER = 4000
 IMAGE_SIZE = 224
-
 EPOCHS = 30
-BATCH_SIZE = 32
 
 Evaluation Results:
-Loss = 0.5615, Accuracy = 0.9150
+Loss = 0.6145, Accuracy = 0.8000
 
 Classification Report:
               precision    recall  f1-score   support
 
-No Pneumonia       0.90      0.99      0.94       271       
-   Pneumonia       0.96      0.77      0.85       129       
+No Pneumonia       0.82      0.88      0.85       518
+   Pneumonia       0.75      0.66      0.70       282
 
-    accuracy                           0.92       400       
-   macro avg       0.93      0.88      0.90       400       
-weighted avg       0.92      0.92      0.91       400       
+    accuracy                           0.80       800
+   macro avg       0.79      0.77      0.77       800
+weighted avg       0.80      0.80      0.80       800
 
-AUC Score: 0.9501
+AUC Score: 0.8658
 Confusion Matrix:
-[[267   4]
- [ 30  99]]
-
----------------------------------------------------------------------------------
-
-resnet_model-2000-224-30.keras:
-
-Evaluation Results:
-Loss = 0.9770, Accuracy = 0.7550
-
-Classification Report:
-              precision    recall  f1-score   support
-
-No Pneumonia       0.79      0.87      0.83       271
-   Pneumonia       0.65      0.51      0.57       129
-
-    accuracy                           0.76       400
-   macro avg       0.72      0.69      0.70       400
-weighted avg       0.75      0.76      0.75       400
-
-AUC Score: 0.8034
-Confusion Matrix:
-[[236  35]
- [ 63  66]]
-
----------------------------------------------------------------------------------
-
-densenet_model-4000-224-30.keras: 
-
-Evaluation Results:
-Loss = 0.8394, Accuracy = 0.7725
-
-Classification Report:
-              precision    recall  f1-score   support
-
-No Pneumonia       0.82      0.83      0.83       518       
-   Pneumonia       0.68      0.67      0.67       282       
-
-    accuracy                           0.77       800       
-   macro avg       0.75      0.75      0.75       800       
-weighted avg       0.77      0.77      0.77       800       
-
-AUC Score: 0.8186
-Confusion Matrix:
-[[430  88]
- [ 94 188]]
+[[455  63]
+ [ 97 185]]
 
 ---------------------------------------------------------------------------------

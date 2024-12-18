@@ -17,7 +17,7 @@ import seaborn as sns
 # pip install -r requirements.txt
 
 # Constants
-IMAGE_NUMBER = 4000  # Number of images to process
+IMAGE_NUMBER = 2000  # Number of images to process
 IMAGE_SIZE = 224
 ZIP_FILE = "rsna-pneumonia-detection-challenge.zip"  # Path to the zip file
 EXTRACT_DIR = "data"  # Directory to extract the zip file contents
@@ -144,21 +144,6 @@ def load_test_images():
     np.save(TEST_DIR, test_images)
     print(f"Test images saved successfully as '{TEST_DIR}'.")
 
-# def analyze_pixel_distribution(images):
-#     """
-#     Analyze the distribution of pixel values in the given images.
-
-#     Parameters:
-#         images (numpy.ndarray): Array of images.
-#     """
-#     # Flatten the images to a 1D array for easier analysis
-#     flat_images = images.reshape(-1)
-#     plt.hist(flat_images, bins=50, density=True)
-#     plt.xlabel('Pixel Value')
-#     plt.ylabel('Density')
-#     plt.title('Pixel Value Distribution')
-#     plt.show()
-
 def analyze_pixel_distribution(images):
     """
     Analyze the distribution of pixel values in the given images.
@@ -169,12 +154,12 @@ def analyze_pixel_distribution(images):
     # Flatten the images to a 1D array for easier analysis
     flat_images = images.reshape(-1)
 
-    # Use numpy's histogram function to get bin counts and bin edges
-    bin_counts, bin_edges = np.histogram(flat_images, bins=50, density=True)
+    # # Use numpy's histogram function to get bin counts and bin edges
+    # bin_counts, bin_edges = np.histogram(flat_images, bins=50, density=True)
 
-    # Print the bin counts and corresponding pixel value ranges
-    for i in range(len(bin_counts)):
-        print(f"Pixel value range: ({bin_edges[i]:.4f}, {bin_edges[i + 1]:.4f}) - Frequency: {bin_counts[i]:.4f}")
+    # # Print the bin counts and corresponding pixel value ranges
+    # for i in range(len(bin_counts)):
+    #     print(f"Pixel value range: ({bin_edges[i]:.4f}, {bin_edges[i + 1]:.4f}) - Frequency: {bin_counts[i]:.4f}")
 
     plt.hist(flat_images, bins=50, density=True)
     plt.xlabel('Pixel Value')

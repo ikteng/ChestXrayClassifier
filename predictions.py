@@ -11,7 +11,6 @@ datagen = 30
 
 DATA_DIR = f"processed_data/processed_data_{IMAGE_NUMBER}-{IMAGE_SIZE}-{datagen}"
 DENSENET_MODEL_DIR = f"models/densenet/densenet_model-{IMAGE_NUMBER}-{IMAGE_SIZE}-{EPOCHS}-{datagen}.keras"
-RESENET_MODEL_DIR = f"models/resnet/resnet_model-{IMAGE_NUMBER}-{IMAGE_SIZE}-{EPOCHS}-{datagen}.keras"
 
 # Load the test data
 print("Loading the test data...")
@@ -22,7 +21,7 @@ print("Test data loaded successfully.")
 print("Loading the pre-trained models...")
 # model = load_model(MODEL_DIR)
 densenet_model = load_model(DENSENET_MODEL_DIR)
-resnet_model = load_model(RESENET_MODEL_DIR)
+# resnet_model = load_model(RESENET_MODEL_DIR)
 print("Pre-trained models loaded successfully.")
 
 def run_prediction():
@@ -56,7 +55,7 @@ def run_prediction():
 
 def run_ensemble_predictions():
     print("Generate weighted ensemble predictions...")
-    models = [densenet_model, resnet_model]
+    models = [densenet_model]
     weights = [0.5, 0.5]
     print("Calculating weighted ensemble predictions...")
     ensemble_pred_weighted = ensemble_predictions_weighted(models, X_test, weights)
