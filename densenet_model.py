@@ -14,7 +14,7 @@ import gc
 from tensorflow.keras import backend as K
 
 # Constants
-IMAGE_NUMBER = 4000
+IMAGE_NUMBER = 2000
 IMAGE_SIZE = 224
 
 EPOCHS = 30
