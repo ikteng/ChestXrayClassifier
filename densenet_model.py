@@ -14,7 +14,7 @@ import gc
 from tensorflow.keras import backend as K
 
 # Constants
-IMAGE_NUMBER = 2000
+IMAGE_NUMBER = 4000
 IMAGE_SIZE = 224
 
 EPOCHS = 30
@@ -99,9 +99,3 @@ history = model.fit(
     class_weight=class_weight_dict,
     callbacks=[early_stopping, reduce_lr, checkpoint, lr_scheduler]
 )
-
-# Cleanup
-del model  # Deletes the model object
-del X_val, y_val  # Deletes dataset variables
-gc.collect()  # Forces garbage collection
-K.clear_session()
