@@ -99,3 +99,9 @@ history = model.fit(
     class_weight=class_weight_dict,
     callbacks=[early_stopping, reduce_lr, checkpoint, lr_scheduler]
 )
+
+print("Completed Training!")
+
+print("Evaluating Model...")
+evaluation_metrics = model.evaluate(X_val, y_val, verbose=1)
+print(f"Evaluation Results:\nLoss = {evaluation_metrics[0]:.4f}, Accuracy = {evaluation_metrics[1]:.4f}")
